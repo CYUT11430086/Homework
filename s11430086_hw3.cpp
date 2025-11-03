@@ -4,7 +4,7 @@
 using namespace std;
 int main(){
     string str;
-    double num1, num2, add, sub, mul, div, remainder;
+    float num1, num2, add, sub, mul, div, remainder;
     cout << "輸入使用者名稱:";
     getline(cin, str);
     //cin.ignore();
@@ -18,5 +18,14 @@ int main(){
     int R1 = static_cast<int>(num1);
     int R2 = static_cast<int>(num2);
     remainder = R1 % R2;
-    
+    cout.setf(ios::fixed);
+    cout.precision(6);
+    cout << "input 2:" << num1<< " " << num2 << endl;
+    cout << "add:" << add << endl;
+    cout << "sub:" << sub << endl;
+    cout << "mul:" << mul << endl;
+    cout << "div:" << div << endl;
+    cout.precision(0);
+    cout << "remainder:" << remainder << endl;
+    return 0;
 }
